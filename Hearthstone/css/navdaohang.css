@@ -1,0 +1,2465 @@
+body {
+	/*background-repeat: no-repeat;*/
+	/*background-image: url(../img/home_bg.jpg);*/
+	/*问题1：直接引入会引起下面的背景图片不会覆盖到*/
+	/*background-position: top center;*/
+	/*定位居中，缩放后就图片不会变动*/
+	/*background-size: 100% auto;*/
+	/*vh:viewpoint height，视窗高度，1vh=视窗高度的1%*/
+	/*background-attachment: fixed;*/
+	/*背景图像是固定的,可以解决问题1*/
+	margin: 0;
+}
+
+
+/*背景问题解决*/
+
+
+/*两层背景问题*/
+
+.bigbg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -9;
+	background-image: url(../img/bigbg.png);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+}
+
+.bg {
+	width: 1920px;
+	height: 100vh;
+	background: url(../img/home_bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: top center;
+	margin: 0 auto;
+}
+
+
+/*遮罩*/
+
+header .shade {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+}
+
+header li:hover a {
+	z-index: 99999;
+	position: relative;
+}
+
+header li:hover+.shade {
+	opacity: 1;
+	z-index: 9999;
+}
+
+
+/*游戏*/
+
+
+/*上三角图标*/
+
+section.nav header .left li .subnav .sjbox {
+	clip: rect(-50px, 200px, 6px, -50px);
+	position: absolute;
+	top: -6px;
+	left: 261px;
+}
+
+section.nav header .left li .subnav .sjbox .sj {
+	width: 10px;
+	height: 10px;
+	background: #151a23;
+	border-top: solid 1px rgba(255, 255, 255, .15);
+	border-left: solid 1px rgba(255, 255, 255, .15);
+	border-right: none;
+	border-bottom: none;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+section.nav header .left li .sanjiaobox {
+	clip: rect(-50px, 200px, 6px, -50px);
+	position: absolute;
+	top: -6px;
+	left: 467px;
+}
+
+section.nav header .left li .sanjiaobox .sanjiao {
+	width: 10px;
+	height: 10px;
+	background: #151a23;
+	border-top: solid 1px rgba(255, 255, 255, .15);
+	border-left: solid 1px rgba(255, 255, 255, .15);
+	border-right: none;
+	border-bottom: none;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+section.nav header .left li .subnav {
+	z-index: 99999;
+}
+
+section.nav header li:hover .subnav {
+	opacity: 1;
+	visibility: visible;
+}
+
+section.nav header li:hover .subnav a {
+	top: 10px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/*电子竞技*/
+
+section.nav header .left li i:hover>.dianzisubnav {
+	z-index: 99999;
+}
+
+section.nav header .left li i:hover>.dianzisubnav {
+	opacity: 1;
+	visibility: visible;
+}
+
+section.nav header .left li i:hover>.dianzisubnav a {
+	top: 10px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/*box解决遮罩问题*/
+
+
+/*section.nav header .shade {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+}
+section.nav header li:hover {
+	z-index: 20;
+	position: relative;
+	
+}
+
+section.nav header li:hover+.shade {
+	opacity: 1;
+	z-index: 0;
+}*/
+
+
+/*导航栏的最大盒子*/
+
+section.nav {
+	background: #2c0903;
+	box-shadow: 0px 0px 5px 0px #791706;
+	position: relative;
+}
+
+
+/*导航栏内容的盒子*/
+
+section.nav header {
+	width: 1235px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+}
+
+
+/*清除overflow否则会影响电子竞技*/
+
+section.nav header:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+/*导航栏左边内容盒子*/
+
+
+/*导航栏的内容logo*/
+
+section.nav header .left .nav-logo>a {
+	display: block;
+	width: 62px;
+	height: 40px;
+	background: url(../img/icon-top.png) no-repeat -18px -75px;
+	margin-top: 8px;
+}
+
+
+/*鼠标上去会高亮*/
+
+section.nav header .left .nav-logo a:hover {
+	background-position: -18px -119px;
+}
+
+
+/*字体外面的盒子*/
+
+section.nav header li {
+	float: left;
+	margin-right: 20px;
+}
+
+
+/*字体*/
+
+section.nav header li a {
+	line-height: 55px;
+	/*margin-right: 20px;*/
+	color: rgba(255, 255, 255, .7);
+}
+
+
+/*字体高亮*/
+
+section.nav header li a.gl:hover {
+	color: #FFFFFF;
+	text-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, .3);
+}
+
+
+/*后面添加小图标，使用伪元素*/
+
+section.nav header li:nth-of-type(2)>a:after,
+section.nav header li:nth-of-type(5)>a:after {
+	display: inline-block;
+	content: '';
+	margin-left: 5px;
+	width: 14px;
+	height: 7px;
+	background: url(../img/icon-top.png) no-repeat -147px -131px;
+}
+
+
+/*你的通行证最后面有个外边距去掉*/
+
+section.nav header .right li:last-of-type a {
+	margin-right: 0;
+}
+
+
+/*电子竞技的布局重新编排第一次  最麻烦的布局问题 180803 10：02开始*/
+
+
+/*后面小图标*/
+
+section.nav header li:nth-of-type(5) i>a:after {
+	display: inline-block;
+	content: '';
+	margin-left: 5px;
+	width: 14px;
+	height: 7px;
+	background: url(../img/icon-top.png) no-repeat -147px -131px;
+}
+
+
+/*小图标指上去变成上面*/
+
+section.nav header li:hover i>a:after {
+	background-position-y: -145px;
+}
+
+
+/*电子竞技下拉菜单布局*/
+
+section.nav header .left li i {
+	width: 83px;
+	line-height: 40px;
+	/*background: red;*/
+	display: block;
+	font-style: normal;
+}
+
+
+/*电子竞技导航向上的小图标*/
+
+section.nav header .left li i .dianzisubnav .dianzisjbox {
+	left: 466px;
+}
+
+section.nav header .left li i .dianzisubnav {
+	/*开启*/
+	/*display: none;*/
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	/*相对定位于导航条*/
+	top: 40px;
+	left: 0;
+	background: rgba(21, 26, 35, .95);
+	width: 100%;
+	z-index: 9999;
+	/*否则会覆盖不了下面的logo*/
+	text-align: center;
+}
+
+section.nav header .left li i:hover>.dianzisubnav {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+section.nav header .left li i .dianzisubnav>a {
+	display: inline-block;
+	vertical-align: middle;
+	height: 308px;
+	position: relative;
+	top: -15px;
+}
+
+section.nav header .left li i .dianzisubnav a .right {
+	width: 0px;
+	/*background: cornflowerblue;*/
+	transition: all .3s;
+	overflow: hidden;
+}
+
+section.nav header .left li i .dianzisubnav a .right img {
+	width: 100px;
+	display: block;
+}
+
+section.nav header .left li i .dianzisubnav a:hover .right {
+	width: 100px;
+}
+
+
+/*图片掉下的顺序不一样*/
+
+section.nav header li i:hover .dianzisubnav>a {
+	top: 0px;
+	transition: all .3s;
+}
+
+section.nav header li i:hover .dianzisubnav>a:nth-of-type(1) {
+	transition-delay: 50ms;
+}
+
+section.nav header li i:hover .dianzisubnav>a:nth-of-type(2) {
+	transition-delay: 100ms;
+}
+
+section.nav header li i:hover .dianzisubnav>a:nth-of-type(3) {
+	transition-delay: 150ms;
+}
+
+section.nav header li i:hover .dianzisubnav>a:nth-of-type(4) {
+	transition-delay: 200ms;
+}
+
+section.nav header li i:hover .dianzisubnav>a:nth-of-type(5) {
+	transition-delay: 250ms;
+}
+
+
+/*右边小图片颜色变亮*/
+
+section.nav header li i:hover .dianzisubnav .right img:hover {
+	background: rgba(255, 255, 255, .05);
+}
+
+
+/*字体变亮*/
+
+section.nav header li i:hover .dianzisubnav .left:hover p {
+	color: #fff;
+	text-shadow: none;
+}
+
+
+/*点击盒子里面的左边的背景颜色变白*/
+
+section.nav header .left li i .dianzisubnav a:hover .left {
+	background: rgba(255, 255, 255, .1);
+	height: 296px;
+	color: #fff;
+	text-shadow: none;
+}
+
+section.nav header li i:hover .dianzisubnav .more {
+	border-top: 1px solid white;
+}
+
+section.nav header li i .dianzisubnav .more span {
+	/*position: relative;
+    top: -50px;
+    opacity: 1;
+    transition: top 1s;*/
+	/*visibility: hidden;*/
+	position: relative;
+	top: -50px;
+	opacity: 0;
+	transition: top 1s;
+}
+
+
+/*更多赛事会掉下来*/
+
+section.nav header li i:hover .dianzisubnav .more span {
+	/*top: 0px;
+    opacity: 1;
+    transition: top 3s, opacity .5s .1s;*/
+	top: -10px;
+	opacity: 1;
+	transition: top .3s, opacity .5s .1s;
+}
+
+
+/*字体变亮*/
+
+section.nav header li i .more span:hover a {
+	color: #fff;
+}
+
+
+/*中午12：50分完成减去吃饭的20分钟，总共花费2小时30分*/
+
+
+/**/
+
+section.nav header li .subnav {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	background: rgba(21, 26, 35, .95);
+	border: solid 1px rgba(255, 255, 255, .15);
+	box-sizing: border-box;
+	text-align: center;
+	padding: 30px 0;
+	z-index: 11;
+}
+
+
+/*消除上面a标签继承下来的样式*/
+
+section.nav header li .subnav a:after {
+	content: none;
+}
+
+
+/*菜单图片*/
+
+section.nav header li .subnav a {
+	width: 180px;
+	height: 180px;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+	
+	position: relative;
+	top: -20px;
+	transition: all .3s;
+}
+
+section.nav header li .subnav a:last-of-type {
+	margin-right: 0;
+}
+
+section.nav header li .subnav a:nth-of-type(1) {
+	background-image: url(../img/c1.jpg);
+}
+
+section.nav header li .subnav a:nth-of-type(2) {
+	background-image: url(../img/c2.jpg);
+}
+
+section.nav header li .subnav a:nth-of-type(3) {
+	background-image: url(../img/c3.jpg);
+}
+
+section.nav header li .subnav a:nth-of-type(4) {
+	background-image: url(../img/c4.jpg);
+}
+
+section.nav header li .subnav a:nth-of-type(5) {
+	background-image: url(../img/c5.jpg);
+}
+
+section.nav header li .subnav a:nth-of-type(6) {
+	background-image: url(../img/c6.jpg);
+}
+
+
+/*
+ 
+ * 
+ * 
+ * */
+
+
+/*图标又下面变成向上*/
+
+section.nav header li:hover a:after {
+	background-position-y: -145px;
+}
+
+
+/*开启*/
+
+section.nav header li .subnav {
+	/*display: none;*/
+	visibility: hidden;
+	transition: all .1s;
+	opacity: 0;
+	/*0803问题1待会要显示出来*/
+	/*z-index: 555;*/
+}
+
+section.nav header li:hover a+.subnav {
+	opacity: 1;
+	/*display: block;*/
+	/*问题2：秒下秒回，没有过渡*/
+	/*top: 20px;*/
+	visibility: visible;
+	/*加上这个之后，回去过度会有延迟，盒子背景先消失，图片后消失*/
+	transition: all .3s;
+}
+
+section.nav header .subnav-d>.a section.nav header li .subnav a {
+	position: relative;
+	top: -30px;
+	transition: all .3s;
+	/*opacity: 0;*/
+	/*0803问题1待会要显示出来*/
+	box-shadow: 0 0 1px 0 rgba(255, 255, 255, .5);
+	-webkit-filter: brightness(100%) contrast(100%);
+}
+
+section.nav header li:hover a+.subnav a {
+	top: 0px;
+	opacity: 1;
+}
+
+section.nav header li .subnav a {
+	margin-left: 20px;
+}
+
+section.nav header li .subnav a:hover {
+	-webkit-filter: brightness(115%) contrast(90%);
+	/*transition: filter .2s,-webkit-filter .2s;*/
+	box-shadow: 0 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+section.nav header li .subnav a:nth-of-type(1) {
+	transition-delay: 50ms;
+}
+
+section.nav header li .subnav a:nth-of-type(2) {
+	transition-delay: 100ms;
+}
+
+section.nav header li .subnav a:nth-of-type(3) {
+	transition-delay: 150ms;
+}
+
+section.nav header li .subnav a:nth-of-type(4) {
+	transition-delay: 200ms;
+}
+
+section.nav header li .subnav a:nth-of-type(5) {
+	transition-delay: 250ms;
+}
+
+section.nav header li .subnav a:nth-of-type(6) {
+	transition-delay: 300ms;
+}
+
+
+/*section.nav header li a:hover+.subnav a {
+	top: 0px;
+}*/
+
+
+/*问题2解决，把hover放在li上面，就可以在li范围内也不会跑上去*/
+
+
+/*电子竞技的下来菜单*/
+
+section.nav header .dz {
+	/*color: red;*/
+	width: 66px;
+	/*border: 1px solid red;*/
+	line-height: 40px;
+	display: inline-block;
+}
+
+section.nav header .dz .subnav-d {
+	/*display: none;*/
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	background: rgba(21, 26, 35, .95);
+	text-align: center;
+	z-index: 9999;
+}
+
+section.nav header .dz:hover .subnav-d {
+	/*display: block;*/
+	opacity: 1;
+	visibility: visible;
+}
+
+section.nav header .dz .subnav-d .a {
+	display: inline-block;
+	vertical-align: middle;
+	height: 300px;
+	position: relative;
+	top: -5px;
+}
+
+section.nav header .dz .subnav-d .left {
+	float: left;
+	background: rgba(21, 26, 35, .95);
+	line-height: 56px;
+	border: none;
+}
+
+section.nav header .dz .subnav-d .left p {
+	color: rgba(255, 255, 255, .7);
+	text-shadow: none;
+}
+
+
+/*鼠标在上面图片和字体会变色*/
+
+section.nav header .dz .subnav-d .left:hover p {
+	color: #fff;
+	text-shadow: none;
+}
+
+section.nav header .dz .subnav-d .right {
+	float: right;
+	/*width: 100px;*/
+	width: 0px;
+	background: rgba(21, 26, 35, 1);
+	/*transition: all 1s;*/
+	overflow: hidden;
+	transition: all .3s;
+}
+
+section.nav header .dz .subnav-d .right img {
+	/*width: 100%;*/
+	width: 100px;
+	/*不能用百分比，否则会是向上缩回去*/
+	display: block;
+}
+
+section.nav header .dz .subnav-d .right img:hover {
+	background: rgba(255, 255, 255, .1);
+}
+
+
+/*左右伸缩*/
+
+section.nav header .dz .subnav-d .a:hover {
+	background: rgba(255, 255, 255, .7);
+}
+
+section.nav header .dz .subnav-d .a:hover .right {
+	width: 100px;
+}
+
+
+/*掉下来效果*/
+
+section.nav header a:hover .subnav-d>.a {
+	top: 0px;
+	/*加在hover这里，回去快速*/
+	transition: all .3s;
+}
+
+section.nav header a:hover .subnav-d>.a:nth-of-type(1) {
+	transition-delay: 50ms;
+}
+
+section.nav header a:hover .subnav-d>.a:nth-of-type(2) {
+	transition-delay: 100ms;
+}
+
+section.nav header a:hover .subnav-d>.a:nth-of-type(3) {
+	transition-delay: 150ms;
+}
+
+section.nav header a:hover .subnav-d>.a:nth-of-type(4) {
+	transition-delay: 200ms;
+}
+
+section.nav header a:hover .subnav-d>.a:nth-of-type(5) {
+	transition-delay: 250ms;
+}
+
+
+/*more*/
+
+section.nav header .dz .subnav-d .more {
+	border: 1px solid rgba(255, 255, 255, .08);
+	margin-top: 10px;
+	color: #Fff;
+}
+
+section.nav header .dz .subnav-d .more span {
+	position: relative;
+	top: -30px;
+	transition: top .3s;
+	opacity: 0;
+	text-shadow: none;
+	color: rgba(255, 255, 255, .7);
+}
+
+section.nav header a:hover .dz .more span {
+	top: 0px;
+	opacity: 1;
+	transition: top .3s, opacity 1s .3s;
+}
+
+section.nav header a .dz .more span:hover {
+	color: #fff;
+}
+
+
+/*导航条右边的通行证的下拉菜单*/
+
+section.nav header li .tong {
+	position: relative;
+}
+/*这个是鼠标点在文字上才有效果，那就必须和全部的东西，连载一起，就可以了*/
+section.nav header li:hover a + .tong-nav{
+	visibility: visible;
+}
+/*section.nav header li .tong:hover+.tong-nav{
+	visibility: visible;
+}*/
+
+section.nav header li .tong-nav {
+	width: 320px;
+	height: 190px;
+	border: 1px solid rgba(255, 255, 255, .08);
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	background: rgba(21, 26, 35, .95);
+	visibility: hidden;
+	/*遮罩在，菜单会突然没了的原因，是因为图层级别关系挡到了*/
+	z-index: 999999999999;
+}
+
+section.nav header li .tong-nav .tong-nav-b {
+	width: 100%;
+	padding: 28px;
+	box-sizing: border-box;
+}
+
+section.nav header li .tong-nav .tong-nav-b .button {
+	background-color: #0e86ca;
+	border: 1px solid #00aeff;
+	color: #fff;
+	padding: 10px 50px;
+	/* transition: color 200ms,background-color 200ms,border-color 200ms; */
+	width: 100%;
+	padding: 20px;
+	padding: 10px 50px;
+}
+
+section.nav header li .tong-nav .tong-nav-b a {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+	display: block;
+	width: 100%;
+	line-height: 16px;
+}
+
+
+/*向上的箭头*/
+
+section.nav header li .tong-nav .tong-nav-b .zuihoujiantou {
+	clip: rect(-50px, 200px, 6px, -50px);
+	position: absolute;
+	top: -6px;
+	left: 300px;
+}
+
+section.nav header li .tong-nav .tong-nav-b .jiantou {
+	width: 10px;
+	height: 10px;
+	background: #151a23;
+	border-top: solid 1px rgba(255, 255, 255, .15);
+	border-left: solid 1px rgba(255, 255, 255, .15);
+	border-right: none;
+	border-bottom: none;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+
+/*登录+注册*/
+
+section.nav header li .tong-nav a span {
+	display: inline-block;
+}
+
+section.nav header li .tong-nav a.count {
+	width: 100%;
+	height: 44px;
+	padding-left: 20px;
+	border-top: solid 1px rgba(255, 255, 255, .08);
+	display: block;
+}
+
+section.nav header li .tong-nav a:nth-of-type(2) {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	display: block;
+	padding-left: 20px;
+	border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+section.nav header li .tong-nav a:nth-of-type(1) span:nth-of-type(1) {
+	/*display: inline-block;*/
+	/*color: #00aeff;*/
+	background: url(../img/icon-top.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	background-position: -141px -14px;
+	vertical-align: middle;
+}
+
+section.nav header li .tong-nav a:nth-of-type(2) span:nth-of-type(1) {
+	background: url(../img/icon-top.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	background-position: -198px -16px;
+	vertical-align: middle;
+}
+
+
+/* logo区域+搜索框 */
+
+section.logo {
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 26px 0;
+}
+
+section.logo .logosite a {
+	display: block;
+	width: 350px;
+	height: 180px;
+	background: url(../img/home-logo.jpg) no-repeat;
+	text-indent: -9999999999em;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+section.logo form {
+	margin-top: 130px;
+	position: relative;
+	margin-right: 170px;
+}
+
+section.logo form input:first-of-type {
+	color: #8bb6ad;
+	border: 1px solid #8bb6ad;
+	/*background: transparent;*/
+	outline: none;
+	padding: 7px 40px 7px 10px;
+	/*background: #29252e;*/
+	background: rgba(58, 58, 58, .3);
+	border: 1px solid #8bb6ad;
+	color: #8bb6ad;
+	font-size: 14px;
+	height: 26px;
+	line-height: 26px;
+	/*下面这个就是为了防止输入的文字到搜索框的图标那里*/
+	padding: 7px 40px 7px 10px;
+	width: 250px;
+}
+
+
+/*placeholder样式设置*/
+
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #fff !important;
+}
+
+section.logo form input:last-of-type {
+	width: 25px;
+	height: 25px;
+	outline: none;
+	border: none;
+	position: absolute;
+	top: 9px;
+	right: 9px;
+	background: url(../img/search01.png) no-repeat;
+	z-index: -1;
+}
+
+
+/* 第二条导航栏 */
+
+section.navWarp {
+	width: 1024px;
+	height: 52px;
+	margin: 0 auto;
+	background: url(../img/nav_bg-1.jpg) no-repeat;
+	/* padding: 0 58px; */
+	/* 大盒子不能有其他边距设置否则排版不齐，这样的话第一个首页需要添加margin-left：58px才没问题 */
+	/*position: relative;*/
+	/*粘性定位，浏览器脱下来固定在上面*/
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+section.navWarp li {
+	width: 114px;
+	height: 52px;
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+
+
+/* 小技巧1 */
+
+section.navWarp li>a:nth-of-type(1) {
+	width: 114px;
+	height: 52px;
+	display: inline-block;
+	float: left;
+	/* background: #00aeff;
+    border-right: 1px solid red;
+	box-sizing: border-box; */
+	background: rgba(0, 0, 0, .3);
+	/* 荣、通过两张图片的变换便可以实现颜色变换效果 */
+	background: url(../img/nav_bg-1.jpg) no-repeat;
+	text-indent: -99999999999em;
+}
+
+
+/* 每个相隔114px所以都再加上114即可 */
+
+section.navWarp li:nth-of-type(1) {
+	margin-left: 58px;
+}
+
+section.navWarp li:nth-of-type(1)>a {
+	background-position: -58px 0;
+}
+
+section.navWarp li:nth-of-type(2)>a {
+	background-position: -172px 0;
+}
+
+section.navWarp li:nth-of-type(3)>a {
+	background-position: -286px 0;
+}
+
+section.navWarp li:nth-of-type(4)>a {
+	background-position: -400px 0;
+}
+
+section.navWarp li:nth-of-type(5)>a {
+	background-position: -514px 0;
+}
+
+section.navWarp li:nth-of-type(6)>a {
+	background-position: -628px 0;
+}
+
+section.navWarp li:nth-of-type(7)>a {
+	background-position: -742px 0;
+}
+
+section.navWarp li:nth-of-type(8)>a {
+	background-position: -856px 0;
+}
+
+
+/* hover的时候改变图片，实现变换效果 */
+
+section.navWarp li:hover>a {
+	/* background: rgba(0, 0, 0, 1); */
+	/* background-position: -58px -104px; */
+	background-position-y: -104px;
+}
+
+
+/* 修改前面的两个箭头 */
+
+
+/* 左边的箭头 */
+
+section.navWarp::before {
+	width: 96px;
+	height: 78px;
+	content: '';
+	background: url(../img/nav-sprite-l.png);
+	position: absolute;
+	top: -18px;
+	left: -41px;
+}
+
+
+/* 右边的箭头 */
+
+section.navWarp::after {
+	width: 96px;
+	height: 78px;
+	content: '';
+	background: url(../img/nav-sprite-r.png);
+	position: absolute;
+	top: -18px;
+	right: -34px;
+}
+
+
+/* 第二条导航栏的下拉菜单 */
+
+section.navWarp li:hover .nav-sub {
+	display: block;
+}
+
+section.navWarp .nav-sub {
+	position: absolute;
+	top: 47px;
+	left: 0;
+	width: 114px;
+	text-align: center;
+	background: rgba(77, 9, 8, .8);
+	display: none;
+	z-index: 9999;
+	/* 当被hover的时候，不会被下面的图片挡住了文字 */
+}
+
+section.navWarp .nav-sub a {
+	display: block;
+	text-decoration: none;
+	color: rgb(205, 153, 142);
+	line-height: 36px;
+	font-size: 14px;
+}
+
+section.navWarp .nav-sub>a:hover {
+	color: #fff;
+	background: #81120c;
+}
+
+
+/* 第二条导航结束 */
+
+
+/* 中间内容开始 */
+
+section.main-content {
+	width: 1024px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+	position: relative;
+}
+
+
+/*浮动的另外一种问题解决*/
+
+section.main-content:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+/* 左边内容部分 */
+
+section.main-content .left {
+	/* 需要y轴重复 */
+	background: url(../img/left-bg.png) repeat-y;
+	width: 703px;
+	/*定位是为了z-index*/
+	position: relative;
+	z-index: 8;
+}
+
+
+/* 左上面轮播图部分 */
+
+section.main-content .left .l-banner {
+	width: 640px;
+	margin: 20px auto;
+	border: 1px solid #b7894c;
+	padding: 1px;
+	position: relative;
+}
+
+section.main-content .left .l-banner img {
+	vertical-align: middle;
+}
+
+section.main-content .left .l-banner .l-text {
+	overflow: hidden;
+	line-height: 42px;
+	background: rgba(0, 0, 0, .5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	/* 细节处理 */
+	box-sizing: border-box;
+	padding: 1px;
+	background-clip: padding-box;
+	border: 1px solid #ff000000;
+	border-top: 1px solid #b7894c;
+}
+
+section.main-content .left .l-banner .l-text p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+section.main-content .left .l-banner .l-text img {
+	width: 64px;
+	/* 设置图片尺寸大小 */
+	margin: 5px 10px;
+	border: 1px solid orange;
+}
+
+section.main-content .left ul.l-videoeye {
+	background: url(../img/eye-bg.jpg) no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 660px;
+	background-position: bottom center;
+	padding-bottom: 6px;
+	padding-top: 20px;
+}
+
+section.main-content .left ul.l-videoeye img {
+	max-width: 100%;
+}
+
+section.main-content .left ul.l-videoeye img:hover {
+	outline: 3px solid #76b900;
+}
+
+section.main-content .left ul.l-videoeye li {
+	width: 280px;
+	padding: 15px 15px 0px 15px;
+	background: url(../img/eye00bg.png) no-repeat;
+}
+
+section.main-content .left ul.l-videoeye li:nth-of-type(odd) {
+	margin-left: -6px;
+	float: left;
+}
+
+section.main-content .left ul.l-videoeye li:nth-of-type(even) {
+	float: right;
+	margin-right: 26px;
+}
+
+section.main-content .left ul.l-videoeye li p {
+	line-height: 20px;
+	color: #2e1b1e;
+	width: 288px;
+	height: 44px;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-top: 8px;
+	overflow: hidden;
+	font-weight: 700;
+	text-align: center;
+}
+
+
+/* 左边内容一大块 */
+
+
+/* 内容第一个盒子 */
+
+section.main-content .left .homeNews>a:first-of-type .homeNewsWarp {
+	padding-top: 45px;
+}
+
+section.main-content .left .homeNews>a {
+	text-decoration: none;
+}
+
+section.main-content .left .homeNews .homeNewsWarp {
+	width: 630px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #dbc497;
+	border-top: 1px solid #efdba8;
+}
+
+
+/* 盒子的右边设置 */
+
+section.main-content .left .homeNews .homeNewsWarp>dd {
+	width: 400px;
+	margin-left: 26px;
+}
+
+
+/*盒子里面的图片设置，相当于盒子的左边设置 */
+
+section.main-content .left .homeNews .homeNewsWarp img {
+	width: 200px;
+	height: 100px;
+	border: 1px solid #b7894c;
+	background: #fee0b9;
+	padding: 1px;
+}
+
+
+/* 段落的标题 */
+
+section.main-content .left .homeNews .homeNewsWarp dd>h3 {
+	font-size: 16px;
+	color: #150603;
+	margin: 0 0 10px 0;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd>p {
+	color: #695745;
+	line-height: 19px;
+	height: 38px;
+	margin-bottom: 10px;
+	/* 字间距 */
+	letter-spacing: 1px;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd>span {
+	font-size: 14px;
+	color: rgb(210, 83, 0);
+	cursor: default;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd>span i {
+	font-style: normal;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd time {
+	font-size: 12px;
+	margin-left: 30px;
+	color: #666;
+	cursor: text;
+}
+
+
+/* 小图标设置 */
+
+
+/* 链接图标 */
+
+section.main-content .left .homeNews .homeNewsWarp dd>span i.lianjie-icon::before {
+	content: '';
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+	background: url(../img/lnew-icon.png) no-repeat -310px -277px;
+	position: relative;
+	top: 4px;
+}
+
+
+/* 爱心图标 */
+
+section.main-content .left .homeNews .homeNewsWarp dd>span i.aixin-icon {
+	cursor: pointer;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd>span i.aixin-icon:before {
+	content: '';
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+	background: url(../img/lnew-icon.png) no-repeat -80px -110px;
+	position: relative;
+	top: 4px;
+	cursor: pointer;
+}
+
+section.main-content .left .homeNews .homeNewsWarp dd>span i.aixin-icon:hover:before {
+	/*background-position: -80px -128px;*/
+	-ms-background-position-y: -128px;
+	background-position-y: -128px;
+}
+
+
+/* 图片变色 */
+
+section.main-content .left .homeNews .homeNewsWarp:hover {
+	background: url(../img/lnewbg.png) repeat-y;
+	background-size: 100% auto;
+}
+
+
+/* 有个遗留问题，图片变换不太明显 问题2*/
+
+section.main-content .left .homeNews .homeNewsWarp:hover img {
+	/*border: 1px solid green;*/
+	padding: 2px;
+	border: none;
+	background: #76b900;
+}
+
+
+/*更多新闻*/
+
+section.main-content .left .homeNews .newMore {
+	text-align: center;
+	text-decoration: none;
+	background: rgb(211, 183, 139);
+	color: rgb(91, 75, 56);
+	border: 1px solid rgb(241, 219, 184);
+	padding: 10px 0;
+}
+
+
+/*更多新闻变色*/
+
+section.main-content .left .homeNews .newMore:hover {
+	background: rgb(195, 164, 115);
+}
+
+
+/*引入下三角标*/
+
+section.main-content .left .homeNews .newMore:after {
+	content: '';
+	width: 20px;
+	height: 7px;
+	background: url(../img/more-icon.png) no-repeat;
+	display: inline-block;
+	background-position: right;
+}
+
+
+/*尾巴部分引入图片*/
+
+section.main-content .left .home-bot {
+	width: 703px;
+	height: 34px;
+	background: url(../img/home-bot.png) no-repeat;
+	background-position: bottom center;
+	position: relative;
+	top: 10px;
+}
+
+
+/* 右边内容部分 */
+
+section.main-content .right {
+	width: 340px;
+	background: url(../img/homerightbg.jpg) repeat-y;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/*中间右边顶部logo内容的盒子*/
+
+section.main-content .right .features {
+	background: url(../img/right-logobg.jpg) no-repeat;
+	text-align: center;
+	padding: 0 20px;
+	/*记得干掉*/
+	min-height: 600px;
+}
+
+section.main-content .right .features>a img {
+	margin: 0 -30px;
+}
+
+section.main-content .right .features ul {
+	width: 240px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+section.main-content .right .features li {
+	float: left;
+	margin-top: 33px;
+	margin-left: -6px;
+}
+
+section.main-content .right .features li a {
+	width: 80px;
+	height: 90px;
+	display: block;
+	background: url(../img/device-icon.png) no-repeat;
+}
+
+section.main-content .right .features li:first-of-type a {
+	background-position-y: -180px;
+}
+
+section.main-content .right .features li:nth-of-type(2) a {
+	background-position-x: -80px;
+}
+
+section.main-content .right .features li:last-of-type a {
+	background-position-x: -160px;
+}
+
+section.main-content .right .features li:hover a {
+	background-position-y: -89px;
+}
+
+
+/*下载部分*/
+
+section.main-content .right .features .downloadicon {
+	padding-top: 20px;
+}
+
+section.main-content .right .features .downloadicon a {
+	width: 220px;
+	height: 61px;
+	display: inline-block;
+	background: url(../img/rightdown.jpg) no-repeat;
+	background-position: -37px bottom;
+}
+
+
+/*右边电竞赛事*/
+
+section.main-content .right .module-media {
+	background: url(../img/module-top-bg.jpg) no-repeat;
+	width: 305px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+section.main-content .right .module-media h3 {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 30px;
+	height: 30px;
+	color: #03345f;
+	margin-bottom: 30px;
+}
+
+
+/*标题前面的图标*/
+
+section.main-content .right .module-media h3.iconCom:before {
+	content: '';
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: url("../img/icon.png") no-repeat;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+section.main-content .right .module-media h3.iconZH:before {
+	background-position: -87px -4px;
+}
+
+
+/*图像居中*/
+
+section.main-content .right .module-media .esport {
+	position: relative;
+	/*记得回来01*/
+	text-align: center;
+}
+
+
+/*图片下面的字体*/
+
+section.main-content .right .module-media .esport>a {
+	display: inline-block;
+	position: relative;
+	width: 244px;
+	color: #251c0f;
+}
+
+
+/*第二张图片定位在上面*/
+
+section.main-content .right .module-media .esport>a img:nth-of-type(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/*设置行高*/
+
+section.main-content .right .module-media .esport>a>h5 {
+	line-height: 30px;
+}
+
+
+/*定位两个箭头大小*/
+
+section.main-content .right .module-media .esport .prenext .pre,
+section.main-content .right .module-media .esport .prenext .next {
+	background: url("../img/esport-icon.gif") no-repeat;
+	width: 7px;
+	height: 14px;
+	display: inline-block;
+	position: absolute;
+	top: 62px;
+	margin-top: -7px;
+}
+
+
+/*定位左边箭头的位置*/
+
+section.main-content .right .module-media .esport .prenext .pre {
+	left: 15px;
+}
+
+
+/*定位右边箭头的位置*/
+
+section.main-content .right .module-media .esport .prenext .next {
+	right: 15px;
+	background-position-x: -8px;
+}
+
+
+/*动画变换*/
+
+
+/*图片突出，颜色变暗：原理伸缩+滤镜*/
+
+section.main-content .right .module-media .esport>a:hover img.shangbu {
+	transform: scale(1.2);
+}
+
+section.main-content .right .module-media .esport>a:hover img.dibu {
+	filter: brightness(70%);
+}
+
+
+/*过渡效果*/
+
+section.main-content .right .module-media .esport a img {
+	transition: all .3s;
+}
+
+
+/*左右小箭头变深*/
+
+section.main-content .right .module-media .esport .prenext .pre:hover {
+	background-position-x: -16px;
+}
+
+section.main-content .right .module-media .esport .prenext .next:hover {
+	background-position-x: -24px;
+}
+
+
+/*解决图片遗留问题*/
+
+section.main-content .right .module-media .esport .live img:hover {
+	transform: scale(1);
+	filter: brightness(100%);
+}
+
+
+/*互动*/
+
+section.main-content .right .module-media h3.iconhd:before {
+	background-position: -4px -189px;
+}
+
+section.main-content .right .hdbox ul {
+	display: block;
+	width: 210px;
+	height: 200px;
+	/*border:1px solid red;*/
+	margin: 0 auto;
+}
+
+section.main-content .right .hdbox ul a {
+	display: block;
+	float: left;
+	color: #251c0f;
+}
+
+section.main-content .right .hdbox ul li {
+	width: 130px;
+	height: 42px;
+	/*border: 1px solid blue;*/
+	float: left;
+	margin-left: -38px;
+	margin-top: 10px;
+}
+
+
+/*订阅号字体颜色*/
+
+section.main-content .right .hdbox ul li .dy {
+	color: #3d8403;
+}
+
+
+/*服务号字体颜色*/
+
+section.main-content .right .hdbox ul li .fy {
+	color: #f2743e;
+}
+
+
+/*两个微信变色*/
+
+section.main-content .right .hdbox ul .a-top:hover {
+	color: #3d8403;
+}
+
+section.main-content .right .hdbox ul .a-bottom:hover {
+	color: #f2743e;
+}
+
+
+/*图标*/
+
+section.main-content .right .hdbox ul span {
+	background: url(../img/hdicon.png) no-repeat;
+	display: inline-block;
+	width: 32px;
+	height: 42px;
+	background-position: -378px 4px;
+	float: left;
+	padding-right: 10px;
+}
+
+section.main-content .right .hdbox ul i {
+	font-style: normal;
+}
+
+section.main-content .right .hdbox ul .a-top {
+	float: left;
+}
+
+section.main-content .right .hdbox ul .a-bottom {
+	float: left;
+}
+
+
+/*后面的一个竖线*/
+
+section.main-content .right .hdbox .shuxian {
+	width: 2px;
+	height: 57px;
+	float: left;
+	padding-right: 4px;
+	margin-right: 10px;
+	display: inline;
+	background: url(../img/hdshuxian.png) no-repeat right 18px;
+}
+
+
+/*第二条竖线*/
+
+section.main-content .right .hdbox .xia-shu {
+	width: 2px;
+	height: 57px;
+	float: left;
+	display: inline;
+	background: url(../img/hdshuxian.png) no-repeat right 18px;
+	position: relative;
+	top: 22px;
+	left: -21px;
+}
+
+
+/*新浪微博*/
+
+section.main-content .right .hdbox .xl {
+	float: right;
+	width: 106px;
+	line-height: 42px;
+}
+
+section.main-content .right .hdbox .xl span {
+	background-position: -210px 2px;
+}
+
+section.main-content .right .hdbox .xl:hover a {
+	color: #db6800;
+}
+
+section.main-content .right .hdbox .xl:hover span {
+	background-position: -210px -59px;
+	transition: background-position .3s;
+}
+
+
+/*手机版官网*/
+
+section.main-content .right .hdbox .ls {
+	width: 130px;
+	height: 42px;
+	/*border: 1px solid blue;*/
+	float: left;
+	margin-right: 20px;
+	margin-top: 20px;
+	line-height: 42px;
+}
+
+section.main-content .right .hdbox .ls span {
+	background-position: -463px 0;
+}
+
+section.main-content .right .hdbox .ls:hover a {
+	color: #db6800;
+}
+
+section.main-content .right .hdbox .ls:hover span {
+	background-position: -463px -59px;
+	transition: background-position .3s;
+}
+
+
+/*官方邮箱*/
+
+section.main-content .right .hdbox .gw {
+	width: 130px;
+	height: 42px;
+	/*border: 1px solid blue;*/
+	float: left;
+	margin-right: 20px;
+	margin-top: 20px;
+	line-height: 42px;
+}
+
+section.main-content .right .hdbox .gw a {
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: -20px;
+}
+
+section.main-content .right .hdbox .gw a:hover {
+	color: #db6800;
+}
+
+
+/*客服热线*/
+
+section.main-content .right .hdbox ul li.kefu {
+	width: 119px;
+	position: relative;
+	top: 21px;
+	left: 18px;
+}
+
+section.main-content .right .hdbox .kefu a {
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: 3px;
+}
+
+section.main-content .right .hdbox .kefu:hover a {
+	color: #db6800;
+}
+
+
+/*右边媒体的另外一种样式*/
+
+
+/*修改媒体前面的小图标*/
+
+section.main-content .right .module-media h3.iconMt:before {
+	background-position: -46px -74px;
+}
+
+
+/*内容大盒子*/
+
+section.main-content .right .module-media .bot {
+	width: 265px;
+	padding: 10px 20px;
+}
+
+
+/*媒体正文的字体*/
+
+section.main-content .right .module-media .bot a {
+	display: block;
+	color: #5b4b38;
+	font-size: 12px;
+	line-height: 36px;
+	border-bottom: 1px solid #e8d6a8;
+}
+
+
+/*前面的右三角箭头*/
+
+section.main-content .right .module-media .bot>a:before {
+	content: '';
+	width: 10px;
+	height: 6px;
+	background: url("../img/icon.png") no-repeat;
+	background-position: -135px -143px;
+	display: inline-block;
+}
+
+
+/*变色*/
+
+section.main-content .right .module-media .bot>a:hover {
+	color: #db6800;
+	;
+}
+
+section.main-content .right .module-media .bot>a:hover:before {
+	background-position: -135px -113px;
+}
+
+
+/*更多排版*/
+
+section.main-content .right .module-media .bot .more {
+	text-align: right;
+}
+
+
+/*more图标设置*/
+
+section.main-content .right .module-media .bot .more a {
+	text-align: right;
+	width: 33px;
+	height: 30px;
+	display: inline-block;
+	background: url("../img/icon-more.png") no-repeat;
+	background-position: bottom;
+}
+
+
+/*换图标*/
+
+section.main-content .right .module-media h3.iconSan:before {
+	background-position: -87px -39px;
+}
+
+
+/*充值指引*/
+
+section.main-content .right .module-normal {
+	margin: 0 auto;
+	width: 235px;
+	padding: 15px;
+	border: 1px solid #efd4ad;
+	background: #d1b181;
+	border-radius: 3px;
+	margin-top: 3px;
+}
+
+section.main-content .right .module-normal li {
+	position: relative;
+}
+
+section.main-content .right .module-normal li>h4 {
+	color: #251c0f;
+}
+
+section.main-content .right .module-normal li span {
+	content: '';
+	width: 100px;
+	height: 66px;
+	background: url("../img/commnity-icon.png") no-repeat;
+	display: block;
+	position: absolute;
+	top: -10px;
+	right: 0px;
+}
+
+section.main-content .right .module-normal li p {
+	color: #66563d;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+/*变换*/
+
+
+/*第一个：充值*/
+
+section.main-content .right .chongzhibox {
+	height: 34px;
+}
+
+section.main-content .right .chongzhibox li span.chongzhiicon {
+	background-position: 0 -279px;
+	margin-right: -33px;
+	margin-top: -15px;
+}
+
+section.main-content .right .chongzhibox li:hover span.chongzhiicon {
+	background-position: 0 -376px;
+}
+
+
+/*天猫*/
+
+section.main-content .right .tianmaobox {
+	height: 42px;
+}
+
+section.main-content .right .tianmaobox li span.tianmaoicon {
+	background-position: 0 -775px;
+	margin-right: -33px;
+	margin-top: -6px;
+	height: 83px;
+}
+
+section.main-content .right .tianmaobox li:hover span.tianmaoicon {
+	background-position: 0 -896px;
+}
+
+
+/*积分*/
+
+section.main-content .right .jifenbox {
+	height: 46px;
+}
+
+section.main-content .right .jifenbox li span.jifenicon {
+	background-position: 0 -1030px;
+	margin-right: -33px;
+	margin-top: 2px;
+}
+
+section.main-content .right .jifenbox li:hover span.jifenicon {
+	background-position: 0 -1033px;
+}
+
+
+/*随身炉石app*/
+
+section.main-content .right .suishenbox {
+	height: 36px;
+}
+
+section.main-content .right .suishenbox li span.suishenicon {
+	background-position: 0 -1120px;
+	margin-right: -33px;
+	margin-top: -18px;
+	height: 79px;
+}
+
+section.main-content .right .suishenbox li:hover span.suishenicon {
+	background-position: 0 -1234px;
+}
+
+
+/*暴雪游戏安全中心*/
+
+section.main-content .right .anquanbox {
+	height: 48px;
+}
+
+section.main-content .right .anquanbox li span.anquanicon {
+	background-position: 0 -1629px;
+	margin-right: -33px;
+	margin-top: -18px;
+	height: 92px;
+}
+
+section.main-content .right .anquanbox li:hover span.anquanicon {
+	background-position: 0 -1721px;
+}
+
+
+/*暴雪游戏服务中心*/
+
+section.main-content .right .fuwubox {
+	height: 40px;
+}
+
+section.main-content .right .fuwubox li span.fuwuicon {
+	background-position: 0 -2040px;
+	margin-right: -33px;
+	margin-top: -18px;
+	height: 92px;
+}
+
+section.main-content .right .fuwubox li:hover span.fuwuicon {
+	background-position: 0 -2045px;
+}
+
+
+/*官方周边商城*/
+
+section.main-content .right .shangchengbox {
+	height: 40px;
+}
+
+section.main-content .right .shangchengbox li span.shangchengicon {
+	background-position: 0 -513px;
+	margin-right: -33px;
+	margin-top: -12px;
+	height: 92px;
+}
+
+section.main-content .right .shangchengbox li:hover span.shangchengicon {
+	background-position: 0 -615px;
+}
+
+
+/*加入我们*/
+
+section.main-content .right .joinbox {
+	height: 40px;
+}
+
+section.main-content .right .joinbox li span.joinicon {
+	background-position: 0 -1355px;
+	margin-right: -33px;
+	margin-top: -12px;
+	height: 92px;
+}
+
+section.main-content .right .joinbox li:hover span.joinicon {
+	background-position: 0 -1444px;
+}
+
+
+/*右边最后的盒子下面的图片*/
+
+section.main-content .right .right-last {
+	width: 340px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	bottom: -35px;
+	background: url(../img/right-last.png) no-repeat 100% 0;
+}
+
+
+/*最后下面的部分--收尾*/
+
+
+/*最后面的超级大盒子*/
+
+section.footer {
+	width: 100%;
+	height: 500px;
+	/*border: 1px solid red;*/
+	margin-top: 200px;
+	/*background: red;*/
+	line-height: 26px;
+	font-size: 12px;
+}
+
+section.footer a {
+	color: #552c09;
+	font-weight: 400;
+}
+
+
+/*底部内容的大盒子*/
+
+section.footer {
+	width: 100%;
+	height: 100%;
+}
+
+section.footer .ft-content {
+	width: 100%;
+	height: 471px;
+	/*height: 500px;*/
+	/*border: 1px solid blue;*/
+	background: url(../img/ft-bg.jpg) no-repeat 50% 0;
+	position: relative;
+}
+
+
+/*注册按钮的大盒子*/
+
+section.footer .ft-content .ft-top {
+	width: 349px;
+	height: 87px;
+	z-index: 101;
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	margin-left: -175px;
+	background: url(../img/ft-top-bg.png) no-repeat;
+}
+
+
+/*注册按钮盒子*/
+
+section.footer .ft-content .ft-top a {
+	display: block;
+	bottom: -5px;
+	height: 78px;
+	left: 50%;
+	margin-left: -123px;
+	overflow: hidden;
+	position: absolute;
+	width: 249px;
+	background: url(../img/ft-top.png) no-repeat;
+}
+
+
+/*注册按钮变亮*/
+
+section.footer .ft-content .ft-top a:hover {
+	background-position: 0 -84px;
+}
+
+section.footer .ft-content .center {
+	width: 1000px;
+	position: relative;
+	left: 50%;
+	margin-left: -500px;
+	color: #fff;
+	z-index: 100;
+	padding-top: 79px;
+	font-size: 14px;
+	/*background: lavender;*/
+	display: block;
+}
+
+section.footer .ft-content .center .center-left {
+	width: 395px;
+	line-height: 30px;
+	height: 30px;
+	/*background: lightseagreen;*/
+}
+
+section.footer .ft-content .center .center-right {
+	width: 300px;
+	line-height: 30px;
+	height: 30px;
+	/*background: lightskyblue;*/
+}
+
+section.footer .ft-content .center .fl>a {
+	color: #fff;
+	margin-right: 37px;
+	vertical-align: middle;
+}
+
+section.footer .ft-content .center .fl>a span {
+	background: url(../img/ft-icon.png) no-repeat;
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	margin-right: 10px;
+}
+
+section.footer .ft-content .center .fl a:first-of-type span {
+	background-position: -6px -7px;
+}
+
+
+/*反馈*/
+
+section.footer .ft-content .center .fl a:nth-of-type(2) span {
+	background-position: -36px -8px;
+}
+
+
+/*加入我们*/
+
+section.footer .ft-content .center .fl a:last-of-type span {
+	background-position: -8px -32px;
+}
+
+
+/*右边*/
+
+
+/*右边内容的大盒子*/
+
+section.footer .ft-content .center .fr p {
+	float: left;
+}
+
+
+/*图标*/
+
+section.footer .ft-content .center .fr a:first-of-type {
+	background-image: url(../img/ft-right-icon.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	background-position: -352px 0;
+	width: 95px;
+	height: 26px;
+}
+
+
+/*+号的盒子*/
+
+section.footer .ft-content .center .fr a:last-of-type {
+	background: #241101;
+	border: 1px solid #2d1702;
+	color: #ac771f;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 5px 0 13px;
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+	padding-top: 0;
+}
+
+
+/*横线*/
+
+section.footer .ft-content .center .fr a:last-of-type i:first-of-type {
+	width: 10px;
+	height: 2px;
+	margin: -1px 0 0 -5px;
+	background: #ac771f;
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+}
+
+
+/*竖线*/
+
+section.footer .ft-content .center .fr a:last-of-type i:last-of-type {
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 10px;
+	margin: -5px 0 0 -1px;
+	background: #ac771f;
+}
+
+
+/*右边竖线隔开的右边盒子*/
+
+section.footer .ft-content .center .fr dl {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+
+/*小箭头外面的盒子*/
+
+section.footer .ft-content .center .fr dl .more {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin: 0 0 0 5px;
+	border: 1px solid #2d1702;
+	background: #241101;
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+	padding-top: 0;
+}
+
+
+/*方框里面的小箭头*/
+
+section.footer .ft-content .center .fr dl .more i {
+	border: 4px solid transparent;
+	border-top-color: transparent;
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -2px 0 0 -4px;
+	border-top-color: #ac771f;
+}
+
+section.footer .ft-bottom {
+	text-align: left;
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	/*background: lightblue;*/
+	padding-top: 175px;
+}
+
+section.footer .ft-bottom a {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	position: relative;
+}
+
+section.footer .ft-bottom .ft-logols {
+	width: 140px;
+	height: 80px;
+	background: url(../img/ft-logols.png) no-repeat;
+}
+
+section.footer .ft-bottom .ft-logowy {
+	background: url(../img/ft-logowy.png) no-repeat;
+	width: 125px;
+	height: 38px;
+	top: 39px;
+}
+
+
+/*最后信息*/
+
+section.footer .ft-bottom .info {
+	width: 706px;
+	float: right;
+	height: 263px;
+	text-align: left;
+	padding: 0 0 0 73px;
+	vertical-align: middle;
+	position: relative;
+	box-sizing: border-box;
+	/*background: lawngreen;*/
+	top: -64px;
+	color: #552c09;
+}
+/*最下面的文字如果是a标签的话，触摸会变色*/
+section.footer .ft-bottom a:hover{
+	color: #fff;
+}
+
+section.footer .ft-bottom .info ul {
+	width: 500px;
+	height: 20px;
+	/*background: lightcoral;*/
+	margin: 66px 0 0 -7px;
+	padding: 0 0 5px;
+	overflow: hidden;
+}
+
+section.footer .ft-bottom .info ul li {
+	display: inline-block;
+	float: left;
+}
+
+section.footer .ft-bottom .info ul li a {
+	color: #ccc;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+/*最后四个小图标*/
+
+section.footer .ft-bottom .info .last>a.icon {
+	width: 26px;
+	height: 27px;
+	display: inline-block;
+	background: lightseagreen;
+}
+
+section.footer .ft-bottom .info .last>a:nth-of-type(1) {
+	background: url(../img/ft-bottom-logo1.png) no-repeat;
+}
+
+section.footer .ft-bottom .info .last>a:nth-of-type(2) {
+	background: url(../img/ft-bottom-logo2.png) no-repeat;
+}
+
+section.footer .ft-bottom .info .last>a:nth-of-type(3) {
+	background: url(../img/ft-bottom-logo3.png) no-repeat;
+}
+
+section.footer .ft-bottom .info .last>a:nth-of-type(4) {
+	background: url(../img/ft-bottom-logo4.png) no-repeat;
+}
+
+
+/*右下角浮标*/
+
+.rightbigbox {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.rightbigbox .rightbox:last-of-type {
+	visibility: hidden;
+}
+
+.rightbigbox .rightbox {
+	width: 82px;
+	height: 82px;
+	background: rgba(96, 52, 18, .6);
+	border-radius: 50%;
+	position: relative;
+}
+
+.rightbigbox .rightbox img {
+	transition: all 1s;
+}
+
+.rightbigbox .rightbox img:first-of-type {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+.rightbigbox .rightbox:hover img:first-of-type {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+}
+
+.rightbigbox .rightbox img:last-of-type {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+}
+
+.rightbigbox .rightbox:hover img:last-of-type {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	z-index: -1;
+}

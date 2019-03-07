@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html manifest="test.manifest">
 
 	<head>
 		<title>洪子杰个人门户网站首页</title>
+		<!--站点图标-->
+		<link rel="shortcut icon" type="image/x-icon" href="images/mine.ico" />
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,13 +67,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a href="about.html">关于自己</a>
 							</li><label>/</label>
 							<li>
-								<a href="services.html">个人经历</a>
+								<a href="experience.html">个人项目</a>
 							</li><label>/</label>
 							<li>
-								<a href="products.html">个人相册</a>
+								<a href="album.html">个人相册</a>
 							</li><label>/</label>
 							<li>
-								<a href="blog.html">个人空间</a>
+								<a href="./project/Blog/index.html">博客</a>
 							</li><label>/</label>
 							<li>
 								<a href="contact.html">联系我</a>
@@ -86,18 +88,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</script>
 						<!-- //script for menu -->
 					</div>
-					<!--<div class="search">
-						<form>
-							<input type="text" value="Search.." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}">
-							<input type="submit" value="">
-						</form>
-					</div>-->
-
 					<div class="clearfix"></div>
-
 				</div>
 				<div class="logo wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<a href="index.html">hzjholy</a>
+					<a href="index.html">hzj holy</a>
 				</div>
 				<div class="header-bottom">
 					<div class="header-grids">
@@ -177,6 +171,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
+			<!--==================-->
+			<!--2019.2.27 19:22添加-->
+			<div class="service-section webAdvance">
+				<div class="container">
+					<h3>前端进阶掌握</h3>
+					<div class="service-grids">
+						<div class="col-md-4 service-grid wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<img src="images/logo-jquery.png" class="img-responsive" alt="jQuery" style="width: 243px;height: 100px;">
+							<h4>jQuery</h4>
+							<p>jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</p>
+							<p>jQuery是一个JavaScript库，旨在简化HTML DOM树遍历和操作，以及事件处理，CSS动画和Ajax。</p>
+						</div>
+						<div class="col-md-4 service-grid wow fadeInUpBig animated animated" data-wow-delay="0.4s">
+							<img src="images/logo-bootstrap.png" class="img-responsive" alt="/">
+							<h4>Bootstrap</h4>
+							<p>Bootstrap is a free and open-source front-end Web framework. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many earlier web frameworks, it concerns itself with front-end development only.</p>
+							<p>
+								Bootstrap是一个免费的开源前端Web框架。它包含用于排版，表单，按钮，导航和其他界面组件的HTML和基于CSS的设计模板，以及可选的JavaScript扩展。与许多早期的Web框架不同，它只关注前端开发。
+							</p>
+							
+						</div>
+						<div class="col-md-4 service-grid wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<img src="images/logo-vue.png" class="img-responsive" alt="/">
+							<h4>Vue.js</h4>
+							<p>
+								Vue.js (commonly referred to as Vue; pronounced, like view) is an open-source JavaScript framework for building user interfaces and single-page applications.
+							</p>
+							<p>Vue.js 是一个构建数据驱动的 web 界面的渐进式框架。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。它不仅易于上手，还便于与第三方库或既有项目整合。</p>
+							` </div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<!--====================-->
 			<div class="work-section wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<div class="container">
 					<h3>热爱学习，更热爱生活</h3>
@@ -247,9 +275,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
-			<div class="copyrights">Collect from
-				<a href="http://www.cssmoban.com/">免费网站模板</a>
-			</div>
 			<div class="news-section">
 				<div class="container">
 					<h3>个人介绍</h3>
@@ -286,82 +311,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 		</div>
-		<div class="categories-section">
-			<div class="container">
-				<div class="footer-grids">
-					<div class="col-md-4 up wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<h3>upcome events</h3>
-						<div class="up1">
-							<div class="up-img">
-								<img src="images/im1.jpg">
-							</div>
-							<div class="up-text">
-								<a href="#">sagittis magna</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="up1">
-							<div class="up-img">
-								<img src="images/im2.jpg">
-							</div>
-							<div class="up-text">
-								<a href="#">Integer molest</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="up1">
-							<div class="up-img">
-								<img src="images/im3.jpg">
-							</div>
-							<div class="up-text">
-								<a href="#">Fusce suscipit</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<div class="col-md-4 cat wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<h3>Categories</h3>
-						<ul>
-							<li>Praesent vestim molestie lacus.</li>
-							<li>Cras consequat iaculis lorem</li>
-							<li>Consectetur adipiscing iaculis</li>
-							<li>Lorem ipsum dolor sit</li>
-							<li>Cum sociis natoque penatibus et magnis </li>
-							<li>Integer molestie lorem</li>
-							<li>lorem,Cras consequat iaculis id vehicula</li>
-						</ul>
-					</div>
-					<div class="col-md-4 cont wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<h3>contact</h3>
-						<ul>
-							<li><i class="phone"></i></li>
-							<li>
-								<p>15521418992</p>
-								<p>13715721213</p>
-							</li>
-						</ul>
-						<ul>
-							<li><i class="smartphone"></i></li>
-							<li>
-								<p>Guangzhou,guangdong</p>
-								<p>Guangdong,chaozhou</p>
-							</li>
-						</ul>
-						<ul>
-							<li><i class="message"></i></li>
-							<li class="moveleft">
-								<a href="mailto:example@mail.com">675934911@qq.com</a>
-								<a href="mailto:example@mail.com">3414378106@qq.com</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
+		
 		<div class="footer-section">
 			<div class="container">
 				<div class="footer-top">
@@ -373,36 +323,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 				<div class="footer-middle wow fadeInDown Big animated animated" data-wow-delay="0.4s">
-					<div class="bottom-menu">
-						<ul>
-							<li>
-								<a href="index.html">home</a>
-							</li>
-							<li>
-								<a href="about.html">About</a>
-							</li>
-							<li>
-								<a href="services.html">Services</a>
-							</li>
-							<li>
-								<a href="products.html">products</a>
-							</li>
-							<li>
-								<a href="blog.html">blog</a>
-							</li>
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-						</ul>
+						<div class="bottom-menu">
+							<ul>
+								<li>
+									<a href="index.html">首页</a>
+								</li>
+								<li>
+									<a href="about.html">关于自己</a>
+								</li>
+								<li>
+									<a href="services.html">个人项目</a>
+								</li>
+								<li>
+									<a href="products.html">个人相册</a>
+								</li>
+								<li>
+									<a href="blog.html">博客</a>
+								</li>
+								<li>
+									<a href="contact.html">联系我</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="footer-bottom wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<p>Copyright &copy; 2015.Company name All rights reserved.More Templates
-						<a href="http://www.cssmoban.com/" target="_blank">个人网站</a> - Collect from
-						<a href="http://www.cssmoban.com/" target="_blank">网站</a>
-					</p>
-				</div>
-				<script type="text/javascript">
+					<div class="footer-bottom wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<p>
+							<a href="#" target="_blank">个人网站</a>
+						</p>
+					</div>
+					<script type="text/javascript">
 					$(document).ready(function() {
 						/*
 							var defaults = {
@@ -422,7 +371,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 			</div>
 		</div>
-
 	</body>
-
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>

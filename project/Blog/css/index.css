@@ -1,0 +1,54 @@
+/*样式初始化*/
+a{
+	text-decoration: none;
+	text-transform: capitalize;
+}
+/*首字母大写*/
+h1,
+small{
+	text-transform: capitalize;
+}
+/*轮播图本身的间隙，bootstrap自带的*/
+.navbar{
+	width: 100%;
+	margin-bottom: 0;
+	z-index: 10;
+}
+/*内容*/
+p{
+	text-indent: 2em;
+}
+.blog_music img{
+	/*图片居中，块级元素*/
+	margin: auto;
+	/*调用旋转*/
+	animation: imgRotate 8s linear infinite;
+	/*infinte无线循环  linear线型转动
+	 * */
+	/*暂停*/
+	animation-play-state: paused;
+}
+.blog_music audio{
+	/*宽度不能超出父容器*/
+	width: 100%;
+}
+.blog_music i{
+	cursor: pointer;
+}
+
+/*旋转的动画样式*/
+@keyframes imgRotate{
+	from{
+	 	transform: rotate(0deg);
+	}
+	to{
+	 	transform: rotate(360deg);
+	}
+}
+
+/*结尾*/
+footer{
+	padding-top: 50px;
+	margin-top: 50px;
+	border-top: 1px solid #CCCCCC;
+}

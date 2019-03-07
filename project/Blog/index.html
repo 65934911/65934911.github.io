@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人博客bootstrap</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<!--1.导航条-->
+		<nav class="navbar navbar-default" data-spy="affix" data-offset-top="200">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+					<a class="navbar-brand" href="#">博客</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav high">
+						<li class="active">
+							<a href="#">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="#music">音乐</a>
+						</li>
+						<li>
+							<a href="../../index.html">主页</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">language<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">chinese</a>
+								</li>
+								<li>
+									<a href="english.html">english</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--2.内容介绍-->
+		<section class="blog_content">
+			<!--html-->
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>
+						bootstrap
+						<small>博客网站搭建</small>
+					</h1>
+				</div>
+				<!--内容-->
+				<div class="well">
+					<p>基本结构：Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在 Bootstrap 基本结构 部分详细讲解。</p>
+					<p>CSS：Bootstrap 自带以下特性：全局的 CSS 设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在 Bootstrap CSS 部分详细讲解。</p>
+					<p>组件：Bootstrap 包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在 布局组件 部分详细讲解。</p>
+					<p>JavaScript 插件：Bootstrap 包含了十几个自定义的 jQuery 插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在Bootstrap 插件 部分详细讲解。</p>
+					<p>定制：您可以定制 Bootstrap 的组件、LESS 变量和 jQuery 插件来得到您自己的版本。</p>
+				</div>
+			</div>
+
+			<!--css-->
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>bootstarp
+						<small>重要知识点</small>
+					</h1>
+				</div>
+				<!--内容-->
+				<div class="well">
+					<!--内容一-->
+					<div class="alert alert-success" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									全局css样式
+								</h1>
+								<p>设置全局 CSS 样式；基本的 HTML 元素均可以通过 class 设置样式并得到增强效果；还有先进的栅格系统。</p>
+								<p>Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。它包含了易于使用的预定义类，还有强大的mixin 用于生成更具语义的布局。</p>
+								<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
+							</div>
+						</div>
+					</div>
+					<!--内容二-->
+					<div class="alert alert-info" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									组件
+								</h1>
+								<p>
+									无数可复用的组件，包括字体图标、下拉菜单、导航、警告框、弹出框等更多功能。
+								</p>
+								<p>bootstrap的字体图标，包括250多个来自 Glyphicon Halflings 的字体图标。Glyphicons Halflings 一般是收费的，但是他们的作者允许 Bootstrap 免费使用。为了表示感谢，希望你在使用时尽量为 Glyphicons 添加一个友情链接。</p>
+							</div>
+						</div>
+					</div>
+					<!--内容三-->
+					<div class="alert alert-warning" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									javaScript插件
+								</h1>
+								<p>
+									jQuery 插件为 Bootstrap 的组件赋予了“生命”。可以简单地一次性引入所有插件，或者逐个引入到你的页面中。
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--内容四-->
+					<div class="alert alert-danger" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									定制
+								</h1>
+								<p>
+									通过自定义 Bootstrap 组件、Less 变量和 jQuery 插件，定制一份属于你自己的 Bootstrap 版本吧。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!--3.音乐播放器-->
+		<!--a标签这里的作用
+			对应上面的音乐，点击跳转到页面的某一部分，根据href和
+			name属性的配置
+		-->
+		<a name='music'></a>
+		<section class="blog_music">
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>
+						音乐播放器
+						<small>唯美</small>
+					</h1>
+				</div>
+				<!--栅格系统-->
+				<div class="row">
+					<!--左侧-->
+					<div class="col-xs-12 col-md-3 col-lg-3">
+						<!--上面-->
+						<audio src="music/tenyear.flac" controls="controls" id="musicPlayer"></audio>
+						<!--autoplay="autoplay"自动播放-->
+						<!--下面-->
+						<div class="alert alert-info">
+							<img src="images/b1.jpg" class="img-responsive img-circle" id="musicImg" />
+						</div>
+					</div>
+					<!--右侧-->
+					<div class="col-xs-12 col-md-9 col-lg-9">
+						<!--表格-->
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>歌曲名</th>
+									<th>演唱人</th>
+									<th>类型</th>
+									<th>播放</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>十年</td>
+									<td>老男孩</td>
+									<td>片头曲</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b1.jpg" data-music="music/tenyear.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>勇气</td>
+									<td>梁静茹</td>
+									<td>插尾曲</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b2.jpg" data-music="music/courage.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>天后</td>
+									<td>薛之谦</td>
+									<td>插曲</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b3.jpg" data-music="music/skyqueen.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>夜空中最亮的星</td>
+									<td>邓紫棋</td>
+									<td>插曲</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b4.jpg" data-music="music/ye.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--4.页尾-->
+		<footer class="text-center">
+			版权所有&copy;2019
+		</footer>
+	</body>
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

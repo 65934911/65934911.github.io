@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>personal blog bootstrap</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<!--1.导航条-->
+		<nav class="navbar navbar-default" data-spy="affix" data-offset-top="200">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+					<a class="navbar-brand" href="#">blogsho</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav high">
+						<li class="active">
+							<a href="#">main<span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="#music">musiczhuy</a>
+						</li>
+						<li>
+							<a href="../../index.html">home page</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">language<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="index.html">chinese</a>
+								</li>
+								<li>
+									<a href="english.html">english</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--2.内容介绍-->
+		<section class="blog_content">
+			<!--html-->
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>
+						bootstrap
+						<small>Blog website construction</small>
+					</h1>
+				</div>
+				<!--内容-->
+				<div class="well">
+					<p>Basic structure: Bootstrap provides a basic structure with a grid system, link styles, and background.This will be explained in detail in the basic structure section of Bootstrap.</p>
+					<p>CSS: Bootstrap comes with the following features: global CSS Settings, defining basic HTML element styles, extensible classes, and an advanced grid system.This will be explained in detail in the Bootstrap CSS section.</p>
+					<p>Components: Bootstrap contains a dozen reusable components for creating images, drop-down menus, navigation, warning boxes, pop-up boxes, and more.This is explained in detail in the layout components section.</p>
+					<p>JavaScript plugins: Bootstrap contains over a dozen custom jQuery plugins.You can include all plug-ins directly or individually.This is explained in detail in the Bootstrap plug-in section.</p>
+					<p>Customization: you can customize Bootstrap components, LESS variables, and jQuery plug-ins to get your own version.</p>
+				</div>
+			</div>
+
+			<!--css-->
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>bootstarp
+						<small>Important points</small>
+					</h1>
+				</div>
+				<!--内容-->
+				<div class="well">
+					<!--内容一-->
+					<div class="alert alert-success" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									CSS of overall situation 
+								</h1>
+								<p>Set global CSS styles;Basic HTML elements can be styled and enhanced with a class;There are also advanced grid systems.</p>
+								<p>Bootstrap provides a responsive, mobile-first streaming raster system that automatically divides into up to 12 columns as the screen or viewport size increases.It includes predefined classes that are easy to use and powerful mixins for generating more semantic layouts.</p>
+								<p>Bootstrap USES certain HTML elements and CSS attributes that require the page to be set to the HTML5 document type.Use the following format for each page in your project.</p>
+							</div>
+						</div>
+					</div>
+					<!--内容二-->
+					<div class="alert alert-info" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									module
+								</h1>
+								<p>
+									Numerous reusable components, including font ICONS, drop-down menus, navigation, warning boxes, pop-up boxes and more.
+								</p>
+								<p>Bootstrap's font icon includes more than 250 font ICONS from Glyphicon Halflings.Glyphicons Halflings generally charge a fee, but their authors allow Bootstrap to be used for free.As a token of appreciation, I hope that you will be able to add a friendship link to Glyphicons when you use them.</p>
+							</div>
+						</div>
+					</div>
+					<!--内容三-->
+					<div class="alert alert-warning" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									javaScript plug-in
+								</h1>
+								<p>
+									The jQuery plug-in gives "life" to the component Bootstrap.You can simply import them all at once, or one at a time into your page.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--内容四-->
+					<div class="alert alert-danger" role="alert">
+						<!--栅格系统-->
+						<div class="row">
+							<div class="col-xs-12 col-md-12 col-lg-12">
+								<h1>
+									customization
+								</h1>
+								<p>
+									Customize your own version of Bootstrap with custom Bootstrap components, Less variables, and jQuery plug-ins.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!--3.音乐播放器-->
+		<!--a标签这里的作用
+			对应上面的音乐，点击跳转到页面的某一部分，根据href和
+			name属性的配置
+		-->
+		<a name='music'></a>
+		<section class="blog_music">
+			<div class="container">
+				<!--标题-->
+				<div class="page-header">
+					<h1>
+						music player 
+						<small>aestheticism </small>
+					</h1>
+				</div>
+				<!--栅格系统-->
+				<div class="row">
+					<!--左侧-->
+					<div class="col-xs-12 col-md-3 col-lg-3">
+						<!--上面-->
+						<audio src="music/tenyear.flac" controls="controls" id="musicPlayer"></audio>
+						<!--autoplay="autoplay"自动播放-->
+						<!--下面-->
+						<div class="alert alert-info">
+							<img src="images/b1.jpg" class="img-responsive img-circle" id="musicImg" />
+						</div>
+					</div>
+					<!--右侧-->
+					<div class="col-xs-12 col-md-9 col-lg-9">
+						<!--表格-->
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>song name</th>
+									<th>singer</th>
+									<th>type</th>
+									<th>play</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>decade</td>
+									<td>old boy</td>
+									<td>opening song</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b1.jpg" data-music="music/tenyear.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>courage</td>
+									<td>Fish Leong</td>
+									<td>Insert the tail piece</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b2.jpg" data-music="music/courage.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>the Queen of heaven </td>
+									<td>Joker Xue</td>
+									<td>episode</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b3.jpg" data-music="music/skyqueen.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>The Brightest Star in the Night Sky</td>
+									<td>Deng Ziqi</td>
+									<td>episode</td>
+									<td>
+										<!--播放，使用自定义属性-->
+										<!--数据来源-->
+										<i data-img="images/b4.jpg" data-music="music/ye.flac" class="glyphicon glyphicon-play-circle"></i>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--4.页尾-->
+		<footer class="text-center">
+			版权所有&copy;2019
+		</footer>
+	</body>
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

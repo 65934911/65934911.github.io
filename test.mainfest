@@ -1,0 +1,12 @@
+CACHE MANIFEST
+## v1.1
+
+CACHE:
+./images/banner.jpg
+
+NETWORK:
+#*
+
+
+FALLBACK:
+./404.html
