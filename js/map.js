@@ -18,12 +18,10 @@ $.getJSON('data/map.json', null, function(result) {
 function openInfo(obj) {
 	//信息数组
 	var info = []
-	info.push("<div><div> <img style=\"float:left;\"  src=\"" +
+//	修改01
+//  修改校徽大小
+	info.push("<div><div> <img style=\"float:left;width:50px;height:50px;\"  src=\"" +
 		obj.schoolBadge + "\"/> </div>")
-	info.push("</br>")
-	info.push("</br>")
-	info.push("</br>")
-	
 	info.push("<div style=\"padding:0 0 0 4px;\"><b>" + obj.name + "</b>");
 	info.push("学校地址:" + obj.addr)
 	info.push("学校代码:" + obj.schoolCode)
